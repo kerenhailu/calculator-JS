@@ -1,0 +1,55 @@
+main {
+  text-align: center;
+  font-weight: bold;
+}
+h1 {
+  text-align: center;
+  font-size: 100px;
+  text-shadow: 2px 2px 2px rgb(238, 12, 31);
+}
+input {
+  border: 2px black solid;
+  height: 7vh;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+}
+.signs .Numbers .Arithmetic {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* padding: 3vh; */
+  justify-content: space-around;
+}
+.BtnNumber {
+  margin: 1%;
+  width: 27%;
+  height: 7vh;
+  font-weight: bold;
+  font-size: large;
+}
+.BtnArithmetic {
+  margin: 1%;
+  width: 20%;
+  height: 7vh;
+  font-weight: bold;
+  font-size: large;
+}
+#point,
+#C {
+  margin: 1%;
+  width: 40%;
+  height: 7vh;
+  font-weight: bold;
+  font-size: large;
+}
+#Equal {
+  width: 90%;
+  height: 10vh;
+  font-weight: bold;
+  font-size: large;
+  
+}
+.BtnArithmetic{
+  background-color: rgb(196, 176, 176);
+}
