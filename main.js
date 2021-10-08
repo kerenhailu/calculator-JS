@@ -17,11 +17,11 @@ sectionCalculator.innerHTML += `
         <button class="BtnNumber">7</button>
         <button class="BtnNumber">8</button>
         <button class="BtnNumber">9</button>
+        <button class="BtnNumber" id="point">.</button>
         <button class="BtnNumber">0</button>
+        <button class="BtnNumber" id="C">C</button>
         <article/>
         <article id="signs">
-        <button id="point">.</button>
-        <button id="C">C</button>
         <button id="Equal">=</button>
         <article/>
         `;
@@ -52,7 +52,7 @@ for (let i = 0; i < BtnArithmetic.length; i++) {
     firstNumber = Number(input.value);
     operator = BtnArithmetic[i].innerText;
     shouldClear = true;
-    BtnArithmetic[i].style.background = "red";
+    // BtnArithmetic[i].style.background = "coral";
     console.log(firstNumber);
     console.log(operator);
   };
@@ -74,10 +74,10 @@ function sign(Number1, operator, Number2) {
  
 Equal.onclick = () => {
   secondNumber = Number(input.value);
-  input.value = sign(firstNumber, operator, secondNumber);
+  
+  input.value += sign(firstNumber, operator, secondNumber);
   console.log(input.value);
 };
-
 function clear() {
   C.onclick = () => {
     input.value = "";
