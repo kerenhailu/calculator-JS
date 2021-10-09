@@ -1,4 +1,5 @@
 sectionCalculator.innerHTML += `
+           <input id="input2" type="number">
             <input id="input" type="number"><br>
             <article id="Arithmetic">
         <button class="BtnArithmetic">+</button>
@@ -27,7 +28,6 @@ sectionCalculator.innerHTML += `
         `;
 let firstNumber;
 let operator;
-let secondNumber;
 let shouldClear = false;
 
 var BtnNumber = document.getElementsByClassName("BtnNumber");
@@ -52,30 +52,28 @@ for (let i = 0; i < BtnArithmetic.length; i++) {
     firstNumber = Number(input.value);
     operator = BtnArithmetic[i].innerText;
     shouldClear = true;
-    // BtnArithmetic[i].style.background = "coral";
     console.log(firstNumber);
     console.log(operator);
   };
 }
 
 function sign(Number1, operator, Number2) {
-      switch (operator) {
-        case "*":
-          return Number1*Number2;
-        case "/":
-          return Number1/Number2;
-
-        case "+":
-          return Number1+Number2;
-        case "-":
-          return Number1-Number2;
-      }
-    };
- 
+  switch (operator) {
+    case "*":
+      return Number1*Number2;
+    case "/":
+      return Number1/Number2;
+    case "+":
+      return Number1+Number2;
+    case "-":
+      return Number1-Number2;
+  }
+}
+let secondNumber;
 Equal.onclick = () => {
   secondNumber = Number(input.value);
-  
-  input.value += sign(firstNumber, operator, secondNumber);
+  input2.value=sign(firstNumber, operator, secondNumber);
+  input.value = sign(firstNumber, operator, secondNumber);
   console.log(input.value);
 };
 function clear() {
